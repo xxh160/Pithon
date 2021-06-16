@@ -1,8 +1,8 @@
 from threading import Thread
 
 from lib.alphabot import AlphaBot2
-from lib.buzzer import beep_on, beep_off
-from lib.led import led
+from util.buzzer import beep_on, beep_off
+from util.led import led
 from util.ultrasonic import distance
 from util.infrared import get_key
 from util.state import State
