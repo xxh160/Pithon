@@ -120,18 +120,17 @@ manual 模式下，小车由遥控器手动控制。其中，6、7 号分别为�
 
 小车能够较成功运行。
 
-详情件附录视频。
+在`set_param`模式下，小车能够自由控制 led 和蜂鸣器，而在`auto_run`模式下，小车检测到障碍物过近时会自动转向，在`manual`模式下，小车能够被遥控器自由控制。
 
-## 讨论
+三种模式之间的切换较为灵敏。
 
-超声波测距有时会出现卡死的情况，此时监听线程失效，只能够手动关闭。
+运行结果见附录视频。
 
 ## 结论
 
-本次实验较成功通过 Python 实践了嵌入式系统编程，较好地完成了教学目标。
+本次实验较成功通过 Python 实践了嵌入式系统编程，较好地完成了实验目的。
 
 ## 附录
 
-<video id="video" controls="" preload="none" poster="doc/img/poster.JPG">
-      <source id="mp4" src="" type="video/mp4">
-</video>
+演示视频在[bilibili](https://www.bilibili.com/video/BV1XQ4y197sD)上。
+
