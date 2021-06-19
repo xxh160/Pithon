@@ -40,7 +40,7 @@ python3 app.py
 
 红外遥控器如下图所示：
 
-![infrared](img/infrared.png)
+<img src="img/infrared.png" alt="infrared" style="zoom: 50%;" />
 
 自左向右，自上而下编号，将遥控器按钮编码为 0-20。
 
@@ -66,13 +66,13 @@ manual 模式下，小车由遥控器手动控制。其中，6、7 号分别为�
 
 `app.py`的任务是：初始化 GPIO channels，创建小车实例，开始监听，并在小车系统退出后清除 GPIO 设置。
 
-![app_py](img/app_py.png)
+<img src="img/app_py.png" alt="app_py" style="zoom:50%;" />
 
 `init_gpio()`职责是在系统启动时**唯一**初始化 GPIO channels，源码在`util/gpio.py`中。
 
 `Pithon`为对应小车的实体类，具体实现在`util/pithon.py`中。
 
-![pithon_py_init](img/pithon_py_init.png)
+<img src="img/pithon_py_init.png" alt="pithon_py_init" style="zoom:50%;" />
 
 `self.drive`为掌控小车驱动的实体类，其实现在`lib/alphabot.py`中，提供了前进、后退、停止、左转、右转、加速、减速的驱动实现。
 
@@ -84,15 +84,15 @@ manual 模式下，小车由遥控器手动控制。其中，6、7 号分别为�
 
 该实例的启动函数为`self.start()`。职责为创建一条监听线程监听红外线信号。
 
-![pithon_py_start](img/pithon_py_start.png)
+<img src="img/pithon_py_start.png" alt="pithon_py_start" style="zoom:50%;" />
 
 `self.listen()`负责监听、处理红外信号。辅助函数为`get_key()`，实现在`util/infrared.py`中，有红外信号则返回信号，没有则返回`None`。
 
 当没有红外信号时，小车保持当前状态。
 
-![pithon_py_listen_default](img/pithon_py_listen_default.png)
+<img src="img/pithon_py_listen_default.png" alt="pithon_py_listen_default" style="zoom:50%;" />
 
-![pithon_py_exec_default](img/pithon_py_exec_default.png)
+<img src="img/pithon_py_exec_default.png" alt="pithon_py_exec_default" style="zoom:50%;" />
 
 如上图所示，如果是在`auto_run`模式下，小车会持续通过超声波获取距离，而后选择避障与否。如果实在`manual`模式下，会不作处理即保持当前运行状态。
 
@@ -100,7 +100,7 @@ manual 模式下，小车由遥控器手动控制。其中，6、7 号分别为�
 
 若有红外信号，则根据当前状态进行有选择性的处理。
 
-![pithon_py_listen_handle](img/pithon_py_listen_handle.png)
+<img src="img/pithon_py_listen_handle.png" alt="pithon_py_listen_handle" style="zoom:50%;" />
 
 如上图所示，1 号按钮使函数返回 1，系统退出。
 
@@ -112,7 +112,7 @@ manual 模式下，小车由遥控器手动控制。其中，6、7 号分别为�
 
 在`manual`模式下，5 号按钮会改变小车状态，其余按钮在`self.exec()`函数中进行有选择性的处理。
 
-![pithon_py_exec_handle](img/pithon_py_exec_handle.png)
+<img src="img/pithon_py_exec_handle.png" alt="pithon_py_exec_handle" style="zoom:50%;" />
 
 更详细实现请自行阅读源码。
 
