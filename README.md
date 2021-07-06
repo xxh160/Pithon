@@ -2,7 +2,7 @@
 
 南大双创嵌入式应用大作业。
 
-实验报告见 doc/report.md。
+实验报告见 [doc/report.pdf](doc/report.pdf)。
 
 ## func
 
@@ -23,4 +23,4 @@ python3 app.py
 
 而后使用红外遥控控制。
 
-具体用法见实验报告。
+其他用法见实验报告。
