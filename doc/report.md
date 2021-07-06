@@ -201,7 +201,7 @@ scp -r /path/to/your/codedir root@192.168.208.124:~/code/
 
 ```shell
 cd ~/code/pithon
-chmod +x app.py
+chmod u+x app.py
 ```
 
 为达到开机自动启动的效果，需要编写自定义脚本`alphabot.sh`：
